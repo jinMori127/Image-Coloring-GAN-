@@ -36,8 +36,9 @@ So for a weight matrix W the spectral normalization is achieved by:
 W_{sp} = \frac{W}{\sigma(W)}
 ```
 
+```math
 Where \(\sigma(W)\) is the largest singular value of the matrix \(W\). The singular values are the square root of the eigenvalues of the matrix \(W^t \cdot W\).
-
+```
 ---
 We also used Leaky ReLU with a slope of 0.2 and BatchNorm2d after each convolution layer.
 
@@ -86,5 +87,13 @@ We checked the results using L1Loss with the original image. All the test images
 
 Our graphs:  
 ![Results Graph](https://github.com/user-attachments/assets/e3e5774d-c9c1-43b5-980b-93122b020c46)
+
+---
+---
+## Brief look at some good results:
+
+![image](https://github.com/user-attachments/assets/3fab8954-2b53-4d88-94f0-32ea65cbcd40)
+
+for full view at the result: https://drive.google.com/drive/folders/1PRRA18SLu9jdqYRAUb0YRSE3hzhFGMqn?usp=sharing
 
 ---
