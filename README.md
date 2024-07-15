@@ -36,7 +36,7 @@ So for a weight matrix W the spectral normalization is achieved by:
 W_{sp} = \frac{W}{\sigma(W)}
 ```
 
-Where ```math (\sigma(W))``` is the largest singular value of the matrix \(W\). The singular values are the square root of the eigenvalues of the matrix ```math(W^t \cdot W)```.
+Where `σ(W)` is the largest singular value of the matrix \(W\). The singular values are the square root of the eigenvalues of the matrix `W^t · W`.
 
 ---
 We also used Leaky ReLU with a slope of 0.2 and BatchNorm2d after each convolution layer.
@@ -61,7 +61,9 @@ We used `nn.BCELoss()`.
 Define the loss by:
 
 define the loss by real_img_loss + fake_img_loss
+
 -real_img_loss = the loss of the discriminator in the real images.
+
 -fake_img_loss = the loss of the discriminator in the generated images
 
 For both the discriminator and the generator, we used:
