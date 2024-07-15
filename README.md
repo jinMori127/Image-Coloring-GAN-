@@ -1,6 +1,8 @@
 ﻿# Image-Coloring-GAN-
 In this project is to input gray scale images and output RGB images.
+
 Data set used: 102flowers.tgz
+
 Network structure:
 We used GAN 
 *Note: we will mark convolutional layer by C.
@@ -41,6 +43,7 @@ Always try to color the images in the same time he maintain colored images
 That could fool the discriminator.
 
 discriminator_loss : used a nn.BCELoss()
+
 define the loss by real_img_loss + fake_img_loss
 real_img_loss = the loss of the discriminator in the real images.
 fake_img_loss = the loss of the discriminator in the generated images.
@@ -49,6 +52,7 @@ For both of the dis and gen we used Optimizer : optim.Adam with lr: 0.0002
 train Bach size:32 , test Bach size: 1, num_epochs: 116
 
 **data processing:** 
+
 we used cv2 and torchvision to manipulate the data , we read the data from the 
 tgz file that we downloaded from the link using the tarfile library, while reading it 
 we turn the data to gray scale and resize the image to 128𝑋128 using cv2, and 
@@ -62,7 +66,10 @@ We implemented a function called get_data that reads the flower images and
 then split the images to training and test set. 
 
 **Results:**
+
 We check the results using l1_loss with the original image also all the test images 
 are outputted to a folder called results. 
 Our graphs:
+
+![image](https://github.com/user-attachments/assets/e3e5774d-c9c1-43b5-980b-93122b020c46)
 
