@@ -25,16 +25,20 @@ It has a sequence of layers as follows:
  
 SP = `spectral_norm()`
 
+---
 Spectral normalization stabilizes the training of discriminators in Generative 
 Adversarial Networks (GANs) by rescaling the weight tensor.
 So for a weight matrix W the spectral normalization is achieved by:
 
 **Normalized Weight Matrix (Ws):**
 
-\[ W_{sp} = \frac{W}{\sigma(W)} \]
+```math
+W_{sp} = \frac{W}{\sigma(W)}
+```
 
-Where \(\sigma(W)\) is the largest singular value of the matrix \(W\). The singular values are the square roots of the eigenvalues of the matrix \(W^t \cdot W\).
+Where \(\sigma(W)\) is the largest singular value of the matrix \(W\). The singular values are the square root of the eigenvalues of the matrix \(W^t \cdot W\).
 
+---
 We also used Leaky ReLU with a slope of 0.2 and BatchNorm2d after each convolution layer.
 
 ## Loss Functions:
