@@ -36,9 +36,8 @@ So for a weight matrix W the spectral normalization is achieved by:
 W_{sp} = \frac{W}{\sigma(W)}
 ```
 
-```math
-Where \(\sigma(W)\) is the largest singular value of the matrix \(W\). The singular values are the square root of the eigenvalues of the matrix \(W^t \cdot W\).
-```
+Where ```math (\sigma(W))``` is the largest singular value of the matrix \(W\). The singular values are the square root of the eigenvalues of the matrix ```math(W^t \cdot W)```.
+
 ---
 We also used Leaky ReLU with a slope of 0.2 and BatchNorm2d after each convolution layer.
 
